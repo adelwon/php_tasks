@@ -27,13 +27,15 @@ sortArray($persons);
         as $person){ ?>
         <tr>
             <td><?= $person['full_name'] ?></td>
-            <td style="background: <?= getColorByYear($person['year']) ?>">
+            <td style="color: <?= getColorByYear($person['year']) ?>">
                 <?php echo $person['year'] ?>
             </td>
             <td <?= !isHigherEducation($person['education']) ?: 'style="font-weight: bold"' ?>>
                 <?= $person['education'] ?>
             </td>
-            <td><?= $person['experience'] ?></td>
+            <td <?= !isBeginner($person['experience']) ?: 'style="background:rgba(8 205 80)"' ?>>
+                <?= $person['experience'] ?>
+            </td>
         </tr>
         </tbody>
         <?php } ?>

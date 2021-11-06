@@ -26,3 +26,8 @@ function isHigherEducation($education): bool
 {
     return $education === "вища";
 }
+
+function isBeginner($experience): bool
+{
+    return $experience < 3;
+}
