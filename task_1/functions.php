@@ -7,7 +7,7 @@ function sortArray(&$persons)
     );
 }
 
-function colorGroups($year)
+function getColorByYear($year)
 {
     if ($year <= 15) {
         return "rgba(255,220,40,0.87)";
@@ -20,4 +20,9 @@ function colorGroups($year)
     if (60 <= $year) {
         return "rgba(235 58 58)";
     }
+}
+
+function isHigherEducation($education): bool
+{
+    return $education === "вища";
 }

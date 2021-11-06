@@ -1,6 +1,7 @@
 <?php
 $persons = require 'array.php';
 require 'functions.php';
+sortArray($persons);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -21,18 +22,18 @@ require 'functions.php';
         </tr>
         </thead>
         <tbody>
-        <?php
-        sortArray($persons);
+        <?php foreach ($persons
 
-        foreach ($persons
-
-        as $person){
-        ?>
+        as $person){ ?>
         <tr>
             <td><?= $person['full_name'] ?></td>
-            <td style="background: <?php echo colorGroups($person['year']) ?>;"><?php echo $person['year'] ?></td>
-            <td><?= $person['education'] ?></td>
-            <td><?php echo $person['experience'] ?></td>
+            <td style="background: <?= getColorByYear($person['year']) ?>">
+                <?php echo $person['year'] ?>
+            </td>
+            <td <?= !isHigherEducation($person['education']) ?: 'style="font-weight: bold"' ?>>
+                <?= $person['education'] ?>
+            </td>
+            <td><?= $person['experience'] ?></td>
         </tr>
         </tbody>
         <?php } ?>
