@@ -22,7 +22,7 @@ return [
         'full_name' => 'Разинець Інна Степанівна',
         'year' => '14',
         'education' => 'початкова',
-        'experience' => '0'
+        'experience' => '3'
     ],
     [
         'full_name' => 'Фанга Віталій Володимирович',
@@ -41,11 +41,5 @@ return [
         'year' => '65',
         'education' => 'вища',
         'experience' => '21'
-    ],
-    [
-        'full_name' => 'Балан Інна Степанівна',
-        'year' => '14',
-        'education' => 'початкова',
-        'experience' => '0'
     ]
 ];

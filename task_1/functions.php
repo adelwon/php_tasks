@@ -10,7 +10,7 @@ function sortArray(&$persons)
 function getColorByYear($year)
 {
     if ($year <= 15) {
-        return "rgba(255,220,40,0.87)";
+        return "rgba(215,178,0,0.87)";
     }
 
     if (16 <= $year & $year <= 59) {
