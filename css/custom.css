@@ -1,0 +1,31 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,500,80);
+
+body {
+    font-family: 'Montserrat', serif;
+}
+
+a {
+    color: #8b0e57;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+a:hover {
+    color: #b10f6d;
+}
+
+.container {
+    max-width: 960px;
+}
+
+.image {
+    width: 250px;
+    height: 250px;
+    border-radius: 125px;
+    box-shadow: 0 31px 31px -17px rgba(0, 0, 0, 0.3);
+}
+
+h1 strong {
+    color: #8b0e57;
+}
