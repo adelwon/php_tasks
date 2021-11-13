@@ -1,5 +1,13 @@
 {
+    "autoload": {
+        "psr-4": {
+            "TaskFour\\": "task_4/"
+        }
+    },
     "require": {
-        "phpquery/phpquery": "^0.0.4"
+        "paquettg/php-html-parser": "^3.1"
+    },
+    "require-dev": {
+        "roave/security-advisories": "dev-latest"
     }
 }
