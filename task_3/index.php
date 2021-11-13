@@ -1,19 +1,43 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_startup_errors', 1);
-ini_set('display_errors', '1');
+$catalog = require 'DataParsingFunctions.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
-require_once __DIR__ . '/../vendor/autoload.php';
-use PhpQuery\PhpQuery;
+    <title>PHP task 3</title>
+</head>
+<body>
+<div class="container">
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">About</th>
+            <th scope="col">Price</th>
+        </tr>
+        </thead>
+        <tbody>
+        <?php foreach ($catalog
 
-$page=file_get_contents('https://hotline.ua/bt/stiralnye-i-sushilnye-mashiny/');
-$pq=new PhpQuery;
-$pq->load_str($page);
-
-echo "<br><br>";
-//return a list of 2 components
-var_dump($pq->query('.catalog-products'));
-
-echo "<br><br>";
-//return the first element
-var_dump($pq->query('.catalog-products')[0]);
+        as $item) {
+        ?>
+        <tr>
+            <td>
+                <?= $item['name'] ?>
+            </td>
+            <td>
+                <?= $item['about'] ?>
+            </td>
+            <td>
+                <?= $item['price'] ?>
+            </td>
+        </tr>
+        </tbody>
+        <?php } ?>
+    </table>
+</div>
+</body>
+</html>
