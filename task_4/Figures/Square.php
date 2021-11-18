@@ -4,12 +4,12 @@ namespace TaskFour\Figures;
 
 final class Square extends BaseFigure implements Figure
 {
-private float $side;
+    private float $side;
 
     public function __construct()
     {
-        $this->side = rand(1,50);
-}
+        $this->side = rand(1, 50);
+    }
 
 
     public function getArea(): float

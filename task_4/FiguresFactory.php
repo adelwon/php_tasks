@@ -3,6 +3,7 @@
 namespace TaskFour;
 
 use TaskFour\Figures\Circle;
+use TaskFour\Figures\Figure;
 use TaskFour\Figures\Triangle;
 use TaskFour\Figures\Square;
 use TaskFour\Figures\Trapeze;
@@ -27,12 +28,17 @@ class FiguresFactory
         for ($i = 0; $i < $generationQuantity; $i++) {
             $class = self::AVAILABLE_FIGURES[rand(0, $availableFigureQuantity)];
 
-            $this->figures[] = new $class;
+            $this->pushFigure(new $class);
         }
     }
 
     public function getFigures(): array
     {
         return $this->figures;
+    }
+
+    public function pushFigure(Figure $figure): void
+    {
+        $this->figures[] = $figure;
     }
 }

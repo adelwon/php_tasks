@@ -9,4 +9,6 @@ interface Figure
     public function getArea(): float;
 
     public function draw(): void;
+
+    public function __toString(): string;
 }
